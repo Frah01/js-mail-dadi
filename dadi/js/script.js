@@ -5,20 +5,15 @@ console.log(x)
 let y = Math.floor(Math.random() * (max - min + 1) + min)
 console.log(y)
 
-
-for (let i= 1 ; i<=6; i++){
-    
     if(x > y){
         console.log('Il primo giocatore ha vinto')
-        
     }
 
     else if (x == y){
         console.log('Pareggio')
     }
-    
+
     else {
         console.log ('Il secondo giocatore ha vinto')
-        
     }
-}
+
