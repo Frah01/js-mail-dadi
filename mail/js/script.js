@@ -1,21 +1,27 @@
 const emails = ['nome.utente@gmail.com', 'utente.nome@gmail.com', 'francesco.utente@gmail.com']
 console.log(emails)
 
-let email= prompt('Inserisci la tua email')
-console.log(email)
+const button= document.getElementById('get-email')
+let presenza = document.getElementById('presenza')
 
-let flag = false;
 
-for (let i=0; i<emails.length; i++){
-    if(emails[i] == email){
-        flag = true;
+button.addEventListener('click', function(){
+    
+    let flag = false;
+    let email= document.getElementById('input-email').value
+    console.log(email)
+
+    for (let i=0; i<emails.length; i++){
+        if(emails[i] == email){
+            flag = true;
+        }
     }
-}
-
-if(flag){
-    console.log('email presente nella lista')
-}
-
-else {
-    console.log('email non presente nella lista')
-}
+    
+    if(flag){
+        presenza.innerHTML =('Email presente nella lista')
+    }
+    
+    else {
+        presenza.innerHTML = ('Email non presente nella lista')
+    }
+})
