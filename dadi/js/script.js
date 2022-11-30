@@ -7,28 +7,28 @@ console.log(y)
 
 
 const button= document.getElementById('genera')
+let primogiocatore = document.getElementById('primo-giocatore')
+let secondogiocatore = document.getElementById('secondo-giocatore')
 
 
 
 button.addEventListener('click', function(){
-
-    let primogiocatore = document.getElementById('primo-giocatore')
-    let secondogiocatore = document.getElementById('secondo-giocatore')
+    
+    let risultato = document.getElementById('risultato')
     primogiocatore.innerHTML = ('Primo giocatore:'+" " + x)
     secondogiocatore.innerHTML = ('Secondo giocatore:'+" " + y)
-    let risultato = document.getElementById('risultato')
 
     
-        if(x > y){
+    if(x > y){
             risultato.innerHTML=('Il primo giocatore ha vinto')
-        }
+     }
     
-        else if (x == y){
+    else if (x == y){
             risultato.innerHTML=('Pareggio')
-        }
+    }
     
-        else {
+    else {
             risultato.innerHTML=('Il secondo giocatore ha vinto')
-        }
+    }
     })
 
